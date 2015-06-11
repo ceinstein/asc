@@ -17,3 +17,10 @@ EXAMPLE RUN
 rsa files are assumed to be in the ubasicexper/experiments/executables folder.
 The asc folder is assumed to be immediately outside the /ubasicexper folder
 The naming convention is rsa* where * = the prime number.
+
+COMMON ERRORS
+
+Dividing by zero
+
+	 This script looks at every 500th occurance of a certain PC. If there are less than 500
+occurances than the program will result in this error.
