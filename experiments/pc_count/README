@@ -16,4 +16,5 @@ EXAMPLE RUN
 ./runexper.sh filename rsafilename
 
 rsa files are assumed to be in the ubasicexper/experiments/executables folder.
+The asc folder is assumed to be immediately outside the /ubasicexper folder
 The naming convention is rsa* where * = the prime number.
