@@ -15,6 +15,7 @@ So far there are two experiments:
 PC_COUNT
 
 This experiment plots PCs with their associated excited bit counts.
+
 	This is located in './experiments/pc_count'.
 
 PREDICTIVENESS
@@ -23,6 +24,7 @@ This experiment plots PCS with their associated predictivness for the
 given program. Predictivness is measured by the amount of hits divided by the
 total amount of rounds. In other words, it's the percentage of rounds that
 yielded a hit.
+
 	This is located in './experiments/predictivness'.
 
 #STATISTICS
