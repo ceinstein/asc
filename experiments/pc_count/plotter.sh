@@ -1,0 +1,14 @@
+filename=$1
+gnuplot <<- EOF
+   set style data histogram;
+   set style fill solid border lc rgb 'black'
+   set nokey
+   set title "PCs vs Excited Bits"
+   set xlabel "PCs"
+   set ylabel "Excited Bits"
+   set boxwidth 0.5
+   set xtics rotate out
+   set term png
+   set output $1'.png'
+   plot $1'.txt' using 2:xticlabels(1) with boxes fillstyle solid lc rgb 'purple';
+EOF

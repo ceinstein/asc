@@ -1,0 +1,28 @@
+filename=$1
+rsaname=$2
+rm $filename.txt
+cd ../../../asc;
+while read line; 
+do ./asc -a $line ../ubasicexper/experiments/$rsaname &> ../ubasicexper/experiments/pc_count//$line.txt;
+printf $line" " >> ../ubasicexper/experiments/pc_count/$filename.txt; 
+tail -1 ../ubasicexper/experiments/pc_count/$line.txt | cut -f 3 | xargs >> ../ubasicexper/experiments/pc_count/$filename.txt; 
+done < ../ubasicexper/experiments/pc_count/rsa_basic_loop_pcs.txt;
+cd ../ubasicexper/experiments/pc_count/;
+rm 4*;
+./plotter.sh;
+gnuplot <<- EOF                                                                 
+   clear
+   reset
+   set style data histogram;                                                    
+   set style fill solid border lc rgb 'black'                                   
+   set nokey                                                                    
+   set yrange [0:]
+   set title "PCs vs Excited Bits"                                              
+   set xlabel "PCs"                                                             
+   set ylabel "Excited Bits"                                                    
+   set boxwidth 0.5                                                             
+   set xtics rotate out                                                         
+   set term png                                                                 
+   set output '$filename.png'                                                          
+   plot '$filename.txt' using 2:xticlabels(1) with boxes fillstyle solid lc rgb 'purple';
+EOF
