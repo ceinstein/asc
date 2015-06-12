@@ -1,6 +1,6 @@
 This experiment contains a bash script to run the experiment
 
----------RUNEXPER.SH-------- 
+---------RUNEXPER.SH-------- (for ubasic) ---------RUNEXPERC.SH---------(for c) 
 Takes a filename (do not include .txt) and the rsaexecutable name as arguments (in that order)
     
     This script runs the asc system on the rsa file with the breakpoints in the
@@ -9,14 +9,16 @@ frequency as the program loops. This script will output a data file with the PCs
 predictiveness of that PC for a given function. This script will also plot a histogram of
 PCs vs the predictiveness that the PC yields
 
+Both the ubasic version and the c version work and are run in the same way, but each need to read
+different PC values.
 
 EXAMPLE RUN
 
 ./runexper.sh filename rsafilename
 
-rsa files are assumed to be in the ubasicexper/experiments/executables folder.
+executable files are assumed to be in the ubasicexper/experiments/executables folder.
 The asc folder is assumed to be immediately outside the /ubasicexper folder
-The naming convention is rsa* where * = the prime number.
+The naming convention is execname* where * = the prime number.
 
 COMMON ERRORS
 
