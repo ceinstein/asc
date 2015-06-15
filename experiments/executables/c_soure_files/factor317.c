@@ -14,7 +14,7 @@ static long invert(long n)
 
 int main(int argc, char *argv[])
 {
-  long p, n = 37100281;
+  long p, n = 317;
 
     if (argc > 1)
         n = atol(argv[1]);

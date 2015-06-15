@@ -1,7 +1,7 @@
 #Sets the filename and the rsaname
 filename=$1
 rsaname=$2
-
+$window_size=$3
 #Removes a previous version of the file since the experiment is being redone
 rm $filename.txt
 
@@ -12,7 +12,7 @@ cd ../../../asc;
 while read line; 
 
 #Runs the file in asc and puts the output into a file (checks every 500 executions of the specified pc)
-do ./asc -a $line/500 ../ubasicexper/experiments/executables/$rsaname &> ../ubasicexper/experiments/predictiveness/$line.txt;
+do ./asc -a $line/$window_size ../ubasicexper/experiments/executables/$rsaname &> ../ubasicexper/experiments/predictiveness/$line.txt;
 
 #Puts the PC name into the data file
 printf $line" " >> ../ubasicexper/experiments/predictiveness/$filename.txt; 

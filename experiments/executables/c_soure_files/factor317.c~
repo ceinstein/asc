@@ -5,9 +5,8 @@
 static long invert(long n)
 {
     register long p;
-
     for (p = 3; p * p <= n; p += 2)
-        if ((n % p) == 0)
+      if ((n % p) == 0)
             return p;
 
     return n;
@@ -15,7 +14,7 @@ static long invert(long n)
 
 int main(int argc, char *argv[])
 {
-    long p, n = 9223371994482243049;
+  long p, n = 31;
 
     if (argc > 1)
         n = atol(argv[1]);
@@ -25,8 +24,6 @@ int main(int argc, char *argv[])
 #endif
     
     p = invert(n);
-
-    printf("%ld divides %ld\n", p, n);
 
     return p;
 }
