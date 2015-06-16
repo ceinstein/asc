@@ -1,7 +1,7 @@
 This experiment contains a bash script to run the experiment
 
----------RUNEXPER.SH-------- 
-Takes a filename (do not include .txt) and the rsaexecutable name as arguments (in that order)
+---------RUNEXPER-------- 
+Takes a filename (do not include .txt),the executable, the window_size, and the filetype as arguments (in that order)
     
     This script runs the asc system on the rsa file with the breakpoints in the
 rsa_basic_loop_pcs.txt. This file contains the pcs in rsa that occur with the same
@@ -13,7 +13,7 @@ the excited bits that PC yields.
 
 EXAMPLE RUN
 
-./runexper.sh filename rsafilename
+./runexper filename executablename window_size type
 
 rsa files are assumed to be in the ubasicexper/experiments/executables folder.
 The asc folder is assumed to be immediately outside the /ubasicexper folder
