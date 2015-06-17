@@ -1,8 +1,16 @@
 #Sets the filename and the rsaname
 filename=$1
-rsaname=$2
+executable=$2
 window_size=$3
 filetype=$4
+
+if [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ] || [ -z "$4" ];
+then
+    echo The arguments are incorrect
+    echo Experiment should be of the form ./runexper.sh filename executable window_size filetype
+    exit 0
+fi
+
 
 if [ "$filetype" = "C" ] || [ "$filetype" = "c" ];
 then
@@ -20,7 +28,7 @@ cd ../../../asc;
 while read line; 
 
 #Runs the file in asc and puts the output into a file
-do ./asc -a $line/$window_size ../ubasicexper/experiments/executables/$rsaname &> ../ubasicexper/experiments/pc_count//$line.txt;
+do ./asc -a $line/$window_size ../ubasicexper/experiments/executables/$executable &> ../ubasicexper/experiments/pc_count//$line.txt;
 
 #Puts the PC name into the data file
 printf $line" " >> ../ubasicexper/experiments/pc_count/$filename.txt; 
