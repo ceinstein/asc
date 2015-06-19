@@ -10,8 +10,7 @@ Before running the experiment script, the asc system must be trained on a certai
 
 1. Run the asc system the first time with the executable. 
 2. Run the asc system again with the newly created exectuable.net file.
-3. Repeat step 2 until the network is sufficiently trained 
-   This is usual indicated by the excited bit mask not getting larger
+3. Repeat step 2 until the network is sufficiently trained *This is usual indicated by the excited bit mask not getting larger*
 
 ##Running the Experiment
 
@@ -46,7 +45,7 @@ The files are named as followed:
 
 ##Common Errors
 
-##Not training the network first
+###Not training the network first
 
 A neural network must first be established before the experiment is run
 
