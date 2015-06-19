@@ -25,7 +25,7 @@ The file multplot.sh groups all plots created from a specific prime number toget
 
 To make the plot, the script must be run with the languagename_primenumber
    
-   The windowsize is omitted because it will take all of them into account in the script
+   **The windowsize is omitted because it will take all of them into account in the script**
 
 ##Naming Conventions
 
