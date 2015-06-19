@@ -10,8 +10,7 @@ title=$datafile\_all.png
 rm $title
 
 #Plots the data using gnuplot
-gnuplot <<EOF
-- EOF
+gnuplot <<- EOF
 clear
 reset
 set style data histogram
@@ -21,6 +20,4 @@ set term png size 1440, 900
 set title "Predictiveness for Various Window Sizes for $datafile"
 set output "$title"
 plot "$a" using 2:xticlabels(1) title "$a", "$b" using 2 title "$b", "$c" using 2 title "$c", "$d" using 2 title "$d", "$e" using 2 title "$e"
-EOF
-
 EOF
