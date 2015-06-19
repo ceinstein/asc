@@ -1,8 +1,17 @@
 #Sets the filename and the rsaname
 filename=$1
-rsaname=$2
+executable=$2
 window_size=$3
 filetype=$4
+counter=0
+
+if [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ] || [ -z "$4" ];
+then
+    echo The arguments are incorrect
+    echo Experiment should be of the form ./runexper.sh filename executable window_size filetype
+    exit 0
+fi
+
 
 if [ "$filetype" = "C" ] || [ "$filetype" = "c" ];
 then
@@ -22,15 +31,20 @@ cd ../../../asc;
 while read line; 
 
 #Runs the file in asc and puts the output into a file (checks every 500 executions of the specified pc)
-do ./asc -a $line/$window_size ../ubasicexper/experiments/executables/$rsaname &> ../ubasicexper/experiments/predictiveness/$line.txt;
+do ./asc -a $line/$window_size ../ubasicexper/experiments/executables/$executable &> ../ubasicexper/experiments/predictiveness/$line.txt;
 
 #Puts the PC name into the data file
 printf $line" " >> ../ubasicexper/experiments/predictiveness/$filename.txt; 
+counter=$((counter + 1))
 
 #Takes the last line in the PC file and puts the excited bit count into the data file
 let num=$(grep "+" ../ubasicexper/experiments/predictiveness/$line.txt -c);
 let den=$(tail -1 ../ubasicexper/experiments/predictiveness/$line.txt | cut -f 1 | xargs);
-echo $num / $den | bc -l >> ../ubasicexper/experiments/predictiveness/$filename.txt;
+printf "%f " "$(echo $num / $den | bc -l)" >> ../ubasicexper/experiments/predictiveness/$filename.txt;
+
+printf $window_size" " >> ../ubasicexper/experiments/predictiveness/$filename.txt;
+
+printf $counter"\n" >> ../ubasicexper/experiments/predictiveness/$filename.txt;
 
 
 #Finishes reading the file 
