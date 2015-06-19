@@ -6,7 +6,7 @@
 
 ##Running the Experiment
 
-To run the experiment, the runexper.sh must be run. This script takes four parameters
+To run the experiment, runexper.sh must be run. This script takes four parameters:
    
 1. A name for the file
 2. The executable name (exectuables are located in ../executables)
