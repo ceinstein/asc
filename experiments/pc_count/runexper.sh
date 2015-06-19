@@ -3,6 +3,7 @@ filename=$1
 executable=$2
 window_size=$3
 filetype=$4
+counter=0
 
 if [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ] || [ -z "$4" ];
 then
@@ -32,10 +33,14 @@ do ./asc -a $line/$window_size ../ubasicexper/experiments/executables/$executabl
 
 #Puts the PC name into the data file
 printf $line" " >> ../ubasicexper/experiments/pc_count/$filename.txt; 
+counter=$((counter + 1))
 
 #Takes the last line in the PC file and puts the excited bit count into the data file
-tail -1 ../ubasicexper/experiments/pc_count/$line.txt | cut -f 3 | xargs >> ../ubasicexper/experiments/pc_count/$filename.txt;
+printf $(tail -1 ../ubasicexper/experiments/pc_count/$line.txt | cut -f 3 | xargs)" " >> ../ubasicexper/experiments/pc_count/$filename.txt;
 
+printf $window_size" " >> ../ubasicexper/experiments/pc_count/$filename.txt;
+
+printf $counter"\n" >> ../ubasicexper/experiments/pc_count/$filename.txt;
 #Finishes reading the file 
 done < $loopfile
 
