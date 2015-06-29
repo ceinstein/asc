@@ -1,0 +1,5 @@
+./asc:main.c:294: warning: auxv random bytes were not cleared
+  Round	    PC	Excited	Hamming	   Loss	 Regret	    MSE	  Error	   MIPS
+      0	40010c	      3	12664.0	12664.0	12664.0	 0.1055	 100.00	0.00458
+      1	40013f	      3	  267.0	12927.0	 6463.5	 0.1024	 100.00	0.00597
+      2	40013f	      3	    3.0	12928.0	 4309.3	 0.0718	 100.00	0.00811

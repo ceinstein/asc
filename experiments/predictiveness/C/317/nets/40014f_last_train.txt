@@ -1,0 +1,4 @@
+../../../asc/asc:main.c:242: warning: could not find file `./C/317/nets/C_317_40014f_500.net'
+../../../asc/asc:main.c:294: warning: auxv random bytes were not cleared
+  Round	    PC	Excited	Hamming	   Loss	 Regret	    MSE	  Error	   MIPS
+      0	40010c	      0	12467.0	12467.0	12467.0	 0.2500	 100.00	0.02328

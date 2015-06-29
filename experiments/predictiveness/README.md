@@ -6,36 +6,26 @@
 
 ##Experiment Set up
 
-Before running the experiment script, the asc system must be trained on a certain executable first. To do this:
+Before running the experiment script, the net_create.sh script must be run. This creates a neural net for each pc at the different window sizes. The nets should then be train (-t flag) around three times before the experiment is run
 
-1. Run the asc system the first time with the executable. 
-2. Run the asc system again with the newly created exectuable.net file.
-3. Repeat step 2 until the network is sufficiently trained *This is usual indicated by the excited bit mask not getting larger*
+Use the -h flag on the script for additional information
+
+This experiment provides three outputs
+     
+     A data file containing the pc's, the predictiveness, the window size, and a count.
+     A plot with the PCs vs predictivenss for a certain window size
+     A directory called languagename_prime_windowsize that contains the raw data from the asc system
+
 
 ##Running the Experiment
 
-To run the experiment, runexper.sh must be run. This script takes four paremeters:
+To run the experiment, the script runexper.sh is used. This script can also make a plot of all the data once all window sizes have undergone the experiemtn
 
-1. A name for the file
-2. The executable name (exectuables are located in ../executables)
-3. The window size (How many times a certain PC will repeat before the network is trained on it)
-4. The file type (Currently only C and basic)
+Use the -h flag on the script for additional information
 
-**The parameters must be provided in this order**
 
-To indicate that the file is a C file, for the fourth parameter type "C" or "c". Anything else will r\
-esult in the
-script interpreting the file as a UBASIC file. The script outputs a data (.txt) file and a plot (.png\
-).
 
 ##Analyzing the Data
-
-###Multplot.sh
-The file multplot.sh groups all plots created from a specific prime number together
-
-To make the plot, the script must be run with the languagename_primenumber
-
-   **The windowsize is omitted because it will take all of them into account in the script**
 
 ##Naming Conventions
 
@@ -43,6 +33,11 @@ The files are named as followed:
 
     languagename_primenumber_windowsize
 
+Inside the language's respecitve directories are numbered directories. These correspond to the prime number associated with the executables. Inside of these is a data directory, a plot directory, and a net directory.
+
+       The neural nets corresponding to the language and prime will be places in the nets directory
+       The data files from the experiment will be placed in the data directory
+       The plots from the experiment will be placed in the plots directory
 ##Common Errors
 
 ###Not training the network first
