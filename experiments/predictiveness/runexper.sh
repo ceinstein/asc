@@ -60,6 +60,8 @@ create(){
 		    printf "%f " "$(echo $num / $den | bc -l)" >> ../ubasicexper/experiments/predictiveness/$filename.txt;
 		    
 		    printf $window" " >> ../ubasicexper/experiments/predictiveness/$filename.txt;
+
+		    printf $exec" " >> ../ubasicexper/experiments/predictiveness/$filename.txt;
 		    
 		    printf $counter"\n" >> ../ubasicexper/experiments/predictiveness/$filename.txt;
 		    

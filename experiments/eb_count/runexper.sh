@@ -64,8 +64,12 @@ create(){
 
 		printf $window" " >> ../ubasicexper/experiments/eb_count/$filename.txt;
 
+		 printf $exec" " >> ../ubasicexper/experiments/eb_count/$filename.txt;
+		
 		printf $counter"\n" >> ../ubasicexper/experiments/eb_count/$filename.txt;
 
+		
+		
 		echo Complete!
 		echo
 		#Finishes reading the file 
