@@ -92,6 +92,7 @@ create(){
     
 }
 training=0
+tcount=0
 while getopts "hcbn:tl:" flag
 do
     case $flag in
@@ -134,14 +135,14 @@ else
 
    if [ $training -eq 0 ];
    then
-       if [ -n $tcount ];
+       if [ !$tcount -eq 0 ];
        then
 	 echo Must specify training with the -t flag!
 	 exit 1;
        fi
        create
    else
-       if [ -z ${tcount+x} ];
+       if [ $tcount -eq 0 ];
        then
 	   echo A training amount must be provided!
 	   echo Exitting

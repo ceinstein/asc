@@ -38,6 +38,12 @@ This data was gathered to identify the PCs the occured at the same
 frequency as the loop. The theory is that these PCs will provide a good
 hyperplane from which to predict the future computation.
 
+
+#UBASIC
+
+This folder contains the code to compile the basic programs into a binary executable. It also contains the interpreter source code and some example factor programs.
+
+
 #Enjoy!
 
 If there is anything that is missing, or that should be added email me at

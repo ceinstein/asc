@@ -1,0 +1,1 @@
+There are 27461 instructions executed per loop. (27462 instructions to get back to the same PC)

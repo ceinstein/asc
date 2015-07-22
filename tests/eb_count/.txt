@@ -1,0 +1,15 @@
+4007e8 ./asc: execvp
+4007ed ./asc: execvp
+4007f2 ./asc: execvp
+4007f6 ./asc: execvp
+4007fa ./asc: execvp
+4007fe ./asc: execvp
+400800 ./asc: execvp
+400804 ./asc: execvp
+400806 ./asc: execvp
+40080a ./asc: execvp
+40081c ./asc: execvp
+400820 ./asc: execvp
+400824 ./asc: execvp
+400843 ./asc: execvp
+400848 ./asc: execvp

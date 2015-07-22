@@ -1,0 +1,3 @@
+rate = 0.100000
+Max epochs       20. Desired error: 0.0000000000.
+Epochs            1. Current error: 0.2033253163. Bit fail 0.

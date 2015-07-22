@@ -1,0 +1,6 @@
+./asc:main.c:225: warning: auxv random bytes were not cleared
+  Round	    PC	Excited	Hamming	   Loss	 Regret	    MSE	Logloss	 Misses	   MIPS
+      0	400144	      5	    0.0	42157.0	42157.0	 0.0000	    inf	 100.00	0.00014
+      1	400800	      5	    0.0	43348.0	21674.0	 0.0000	    inf	 100.00	   4.42
+      2	400800	      8	    5.0	43349.0	14449.7	 0.2453	 6.7818	 100.00	  13.85
+      3	400160	      8	    5.0	43349.0	10837.2	 0.2453	 6.7818	 100.00	  12.17

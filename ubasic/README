@@ -1,0 +1,15 @@
+ubasic README
+Christopher Kuech
+5/6/15
+
+To compile a BASIC program with it's interpreter into
+a static binary, run
+  $ make [BASIC file]
+where BASIC file does not include the .bas extension.
+
+For example, to compile the RSA program, run
+  $ make rsa
+This will produce a binary named `rsa`
+
+
+[EOF]

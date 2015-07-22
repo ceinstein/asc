@@ -1,0 +1,4 @@
+xxd -i < rsa.bas > program.xxd~
+echo ', 0x00' >> program.xxd~
+cc crt0.s tokenizer.c ubasic.c use-ubasic.c -DTRACE_GOTO -D_BSD_SOURCE -D_GNU_SOURCE -nostdinc -I /usr/include/diet -Wall -Werror -Wno-attributes -Wno-deprecated-declarations -g -nostdlib -static -L /usr/lib/diet/lib -lc -lm -o rsa
+rm program.xxd~
